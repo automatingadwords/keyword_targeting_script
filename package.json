@@ -1,0 +1,18 @@
+{
+  "name": "keyword_targeting_script",
+  "version": "1.0.0",
+  "description": "Project scope is here: https://docs.google.com/document/d/1mx5cJnEahJ_ONbPWQqvKpdWTQieM5-rp_xzM3D0FYoM/edit?pli=1",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "combine": "python3 script/combine.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "eslint-config-google": "^0.14.0",
+    "vitest": "^0.34.1"
+  }
+}

@@ -272,7 +272,12 @@ function getTargetingToolOutputData(spreadsheetUrl=null) {
   }
   const outputsSheet = SpreadsheetApp.openByUrl(spreadsheetUrl)
       .getSheetByName(OUTPUT_SHEET_NAME);
-  return outputsSheet.getDataRange().getValues();
+  if (!outputsSheet.getRange('A1').getValue()) {
+    LOGS.push('No output data found. Please check the settings sheet.');
+    return [];
+  }
+  const outputData = outputsSheet.getDataRange().getValues();
+  return outputData;
 }
 
 
@@ -484,5 +489,5 @@ function getAdWordsFormattedDate(d, format) {
 
 
 
-// Bundle created at 2023-08-24 16:10:11
+// Bundle created at 2023-08-24 16:50:13
 // Application environment: APP_ENVIRONMENTS.PRODUCTION;
